@@ -26,23 +26,27 @@ _How to generate a safe customized portrait?_
   
 </div>
    
-  <a href="https://openaccess.thecvf.com/content/CVPR2025/html/Wang_Adv-CPG_A_Customized_Portrait_Generation_Framework_with_Facial_Adversarial_Attacks_CVPR_2025_paper.html)"><strong>Paper</strong></a> |
+  <a href="https://openaccess.thecvf.com/content/CVPR2025/html/Wang_Adv-CPG_A_Customized_Portrait_Generation_Framework_with_Facial_Adversarial_Attacks_CVPR_2025_paper.html"><strong>Paper</strong></a> |
 <a href="https://github.com/JunyingWang959/Adv-CPG"><strong>Github</strong></a> 
   <div style="width: 100%; text-align: center; margin:auto;">
-      <img style="width:70%" src="spot.png">
+      <img style="width:85%" src="frame_.jpg">
   </div>
 
-  The motivation of the **A4Bench**. The affordance theory proposed by James J. Gibson defines the action possibilities
-provided by the object for organisms. Evaluating the affordance perception abilities of MLLMs can help enable more efficient
-task execution and improved adaptability to diverse environments for AI systems.
+  The overall framework of the proposed **Adv-CPG**. The framework comprises three key modules: [A] a multi-modal image
+customizer (MMIC), [B] an ID encryptor (En1), and [C] an encryption enhancer (En2). En1 and En2 enable incremental facial privacy
+protection, and MMIC achieves fine-grained and personalized portrait generation.
 
 <div align="left">
-  
-## A4Bench Samples
+    
+### Infer
+```setup
+python infer_adv_cpg.py
+```
+    
+## Thanks
 
-Typical samples from the **A4Bench**. Each sample is accompanied by a image-question-answer pair. **A4Bench** evaluates
-models across diverse discplines (*Constitutive Affordance*) and challenging dimensions (*Transformative Affordance*), ensuring
-a comprehensive evaluation of the affordance perception capabilities.
+The code for this work builds upon **ConsistentID**. We sincerely thank them for their excellent work; please visit their <a href="https://github.com/JackAILab/ConsistentID"><strong>project page</strong></a>  for more details. 
+Please maintain the same environment configuration as theirs and directly run infer_adv.py to execute this work.
 
   ## Citation
 If you found this code helpful, please consider citing:
