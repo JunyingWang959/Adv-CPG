@@ -46,7 +46,7 @@ python infer_adv_cpg.py
 ## Thanks
 
 The code for this work builds upon **ConsistentID**. We sincerely thank them for their excellent work; please visit their <a href="https://github.com/JackAILab/ConsistentID"><strong>project page</strong></a>  for more details. 
-Please maintain the same environment configuration as theirs and directly run infer_adv.py to execute this work.
+Please maintain the same environment configuration as theirs and directly run infer_adv_cpg.py to execute this work.
 
   ## Citation
 If you found this code helpful, please consider citing:
