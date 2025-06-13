@@ -2,7 +2,7 @@ import torch
 from safetensors import safe_open
 
 ### Used to remove redundant parameters and minimize the model.
-ckpt = "/fs-computility/ResearchEval/wangjunying/adv/ConsistentID/models/ConsistentID_SDXL_SDXL-v1.bin"
+ckpt = "ConsistentID_SDXL_SDXL-v1.bin"
 state_dict = torch.load(ckpt, map_location="cuda")
 
 image_proj_sd = {}
@@ -21,7 +21,7 @@ for k in state_dict:
     elif k.startswith("FacialEncoder"):
         FacialEncoder[k.replace("FacialEncoder.", "")] = state_dict[k]
 
-state_dict_path = "/fs-computility/ResearchEval/wangjunying/adv/ConsistentID/models/ConsistentID-v1.bin"
+state_dict_path = "ConsistentID-v1.bin"
 torch.save({"image_proj_model": image_proj_sd, "adapter_modules": adapter_modules, "FacialEncoder": FacialEncoder}, state_dict_path)
 print(f"Sucessful saved at: {state_dict_path}")
 
